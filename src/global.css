@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import 'tailwindcss';
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-optical-sizing: auto;
+  user-select: none;
+}
+
+header {
+  @apply flex items-center justify-between gap-4 p-8;
+}
+
+.rounded-button {
+  @apply cursor-pointer rounded-full bg-[#f36d4f] px-5 py-3 font-bold text-white shadow-lg shadow-black/40 transition-transform duration-300 hover:scale-105;
+}
+
+.text-button {
+  @apply cursor-pointer font-bold transition-colors duration-300 hover:text-[#f36d4f];
+}
+footer {
+  @apply flex items-center justify-between bg-black p-8 text-white;
+}
+
+.animation {
+  @apply cursor-pointer transition-transform duration-300 hover:scale-105;
+}
