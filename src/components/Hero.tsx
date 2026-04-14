@@ -4,7 +4,7 @@ export default function Hero() {
       <h1 className='text-8xl font-bold uppercase'>вышки про</h1>
       <div className='flex flex-col items-end gap-2'>
         <div className='flex gap-4'>
-          {Array.from({ length: 4 }).map((item, index) => (
+          {Array.from({ length: 4 }).map((_, index) => (
             <img
               key={index}
               src=''

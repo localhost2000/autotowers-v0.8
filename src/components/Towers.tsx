@@ -7,7 +7,7 @@ export default function Towers() {
         </button>
 
         <div className='grid w-full grid-cols-8 gap-4'>
-          {Array.from({ length: 8 }).map((item, index) => (
+          {Array.from({ length: 8 }).map((_, index) => (
             <img
               key={index}
               src=''
