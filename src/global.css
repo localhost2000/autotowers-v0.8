@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import 'tailwindcss';
 
+@theme {
+  --color-accent: #734ff3;
+}
+
 body {
   font-family: 'Montserrat', sans-serif;
   font-optical-sizing: auto;
@@ -8,20 +12,44 @@ body {
 }
 
 header {
-  @apply flex items-center justify-between gap-4 p-8;
+  @apply fixed top-0 z-10 w-full p-4 transition-all duration-300;
+}
+
+button {
+  @apply outline-none;
 }
 
 .rounded-button {
-  @apply cursor-pointer rounded-full bg-[#f36d4f] px-5 py-3 font-bold text-white shadow-lg shadow-black/40 transition-transform duration-300 hover:scale-105;
+  @apply bg-accent cursor-pointer rounded-xl px-6 py-3 font-bold text-white shadow-lg shadow-black/40 transition-transform duration-300 hover:scale-105;
+}
+
+.secondary-button {
+  @apply hover:border-accent cursor-pointer rounded-xl border-2 border-gray-300 bg-transparent px-6 py-3 font-bold transition-colors duration-300;
 }
 
 .text-button {
-  @apply cursor-pointer font-bold transition-colors duration-300 hover:text-[#f36d4f];
+  @apply hover:text-accent cursor-pointer font-bold transition-colors duration-300;
 }
 footer {
-  @apply flex items-center justify-between bg-black p-8 text-white;
+  @apply bg-black p-4 text-white;
 }
 
 .animation {
   @apply cursor-pointer transition-transform duration-300 hover:scale-105;
+}
+
+.hero {
+  @apply mx-auto flex min-h-screen w-[1500px] items-center justify-between gap-4 p-4;
+}
+
+.backdrop-hero {
+  @apply absolute left-0 -z-10 size-full object-cover opacity-15 blur-[2px];
+}
+
+.service {
+  @apply hover:bg-accent/5 flex flex-col overflow-hidden rounded-2xl bg-white shadow-lg shadow-black/10 transition-all duration-300;
+}
+
+.section {
+  @apply mx-auto flex w-[1500px] flex-col items-center justify-center gap-4 p-4;
 }
