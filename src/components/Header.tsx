@@ -28,27 +28,30 @@ export default function Header() {
     <header
       className={`${isScrolled ? 'bg-white shadow-lg shadow-black/10' : ''}`}
     >
-      <div className='mx-auto flex w-[1500px] items-center justify-between gap-4 px-4'>
+      <div className='min-desktop:w-[1500px] min-desktop:px-4 mx-auto flex items-center justify-between gap-4'>
         <ReactTyped
           strings={headlines}
           typeSpeed={120}
           backSpeed={80}
           loop
-          className='text-2xl font-bold'
+          className='min-desktop:text-2xl font-bold'
         />
 
-        <div className='absolute left-1/2 flex -translate-x-1/2 items-center justify-center gap-15'>
+        <div className='max-desktop:hidden absolute left-1/2 flex -translate-x-1/2 items-center justify-center gap-15'>
           <button className='text-button'>Услуги</button>
           <button className='text-button'>Работы</button>
-          {/* <button className='text-button'>Цены</button> */}
           <button className='text-button'>Отзывы</button>
           <button className='text-button'>Контакты</button>
         </div>
 
-        <div className='flex items-center gap-6 text-sm font-bold text-gray-500'>
+        <div className='max-desktop:hidden flex items-center gap-6 text-sm font-bold text-gray-500'>
           <span>{constant.NUMBER}</span>
           <button className='rounded-button'>Заказать</button>
         </div>
+
+        <button className='rounded-button min-desktop:hidden text-sm'>
+          Заказать
+        </button>
       </div>
     </header>
   )

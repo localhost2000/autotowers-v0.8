@@ -8,7 +8,7 @@ import Services from './components/Services'
 
 export default function App() {
   return (
-    <div className='flex flex-col justify-between'>
+    <>
       <Header />
 
       <Hero />
@@ -28,6 +28,6 @@ export default function App() {
       {/* <LinkButton /> */}
 
       <Footer />
-    </div>
+    </>
   )
 }

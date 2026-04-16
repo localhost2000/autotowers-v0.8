@@ -3,6 +3,8 @@
 
 @theme {
   --color-accent: #734ff3;
+  --breakpoint-desktop: 1500px;
+  --breakpoint-tablet: 900px;
 }
 
 body {
@@ -31,7 +33,7 @@ button {
   @apply hover:text-accent cursor-pointer font-bold transition-colors duration-300;
 }
 footer {
-  @apply bg-black p-4 text-white;
+  @apply min-w-[320px] bg-black p-4 text-white;
 }
 
 .animation {
@@ -39,7 +41,7 @@ footer {
 }
 
 .hero {
-  @apply mx-auto flex min-h-screen w-[1500px] items-center justify-between gap-4 p-4;
+  @apply max-desktop:flex-col min-desktop:min-h-screen min-desktop:w-[1500px] mx-auto flex min-w-[320px] items-center justify-between gap-4;
 }
 
 .backdrop-hero {
@@ -51,5 +53,9 @@ footer {
 }
 
 .section {
-  @apply mx-auto flex w-[1500px] flex-col items-center justify-center gap-4 p-4;
+  @apply min-desktop:mx-auto min-desktop:w-[1500px] flex min-w-[320px] flex-col items-center justify-center gap-4 p-4;
+}
+
+.heading {
+  @apply max-desktop:my-14 max-desktop:text-3xl my-20 text-5xl font-bold;
 }
