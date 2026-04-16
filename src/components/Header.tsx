@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { ReactTyped } from 'react-typed'
 import { constant } from '../constants'
-import { headlines } from '../data'
+import { headlines, sections } from '../data'
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -37,21 +37,29 @@ export default function Header() {
           className='min-desktop:text-2xl font-bold'
         />
 
-        <div className='max-desktop:hidden absolute left-1/2 flex -translate-x-1/2 items-center justify-center gap-15'>
-          <button className='text-button'>Услуги</button>
-          <button className='text-button'>Работы</button>
-          <button className='text-button'>Отзывы</button>
-          <button className='text-button'>Контакты</button>
-        </div>
+        <nav className='max-desktop:hidden absolute left-1/2 flex -translate-x-1/2 items-center justify-center gap-15'>
+          {sections.map(({ title, href }, index) => (
+            <a key={index} className='link' href={href}>
+              {title}
+            </a>
+          ))}
+        </nav>
 
         <div className='max-desktop:hidden flex items-center gap-6 text-sm font-bold text-gray-500'>
-          <span>{constant.NUMBER}</span>
-          <button className='rounded-button'>Заказать</button>
+          <a href={`tel:${constant.NUMBER}`} className='link'>
+            {constant.NUMBER}
+          </a>
+          <a href={`tel:${constant.NUMBER}`} className='accent-button'>
+            Заказать
+          </a>
         </div>
 
-        <button className='rounded-button min-desktop:hidden text-sm'>
+        <a
+          href={`tel:${constant.NUMBER}`}
+          className='accent-button min-desktop:hidden text-sm'
+        >
           Заказать
-        </button>
+        </a>
       </div>
     </header>
   )

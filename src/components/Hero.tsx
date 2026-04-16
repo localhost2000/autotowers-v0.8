@@ -1,3 +1,4 @@
+import { constant } from '../constants'
 import { specifications } from '../data'
 import DoneIcon from '/done-icon.svg?url'
 
@@ -7,10 +8,10 @@ export default function Hero() {
       <img
         src={`${import.meta.env.BASE_URL}/services/autotowers.jpg`}
         alt=''
-        className='backdrop-hero max-desktop:h-[870px]! max-[381px]:hidden'
+        className='backdrop-hero max-desktop:h-[800px]! max-[381px]:hidden'
       />
 
-      <div className='max-desktop:flex-col max-desktop:mt-[200px] max-desktop:gap-6 flex w-full items-center justify-between p-4'>
+      <div className='max-desktop:flex-col max-desktop:mt-[140px] max-desktop:gap-6 flex w-full items-center justify-between p-4'>
         <div className='max-desktop:gap-4 max-desktop:w-full flex flex-col gap-8'>
           <div className='max-desktop:hidden flex gap-12 font-bold text-gray-500'>
             {specifications.map((specification, index) => (
@@ -21,17 +22,21 @@ export default function Hero() {
             ))}
           </div>
 
-          <h1 className='max-desktop:text-6xl text-8xl font-bold uppercase'>
+          <span className='max-desktop:text-6xl text-8xl font-bold uppercase'>
             вышки <br /> про👷
-          </h1>
+          </span>
 
           <span className='max-desktop:max-w-1/2 text-lg font-bold'>
             Профессиональные услуги на высоте.
           </span>
 
           <div className='max-desktop:flex-col max-desktop:gap-2 flex gap-8'>
-            <button className='rounded-button'>Получить консультацию</button>
-            <button className='secondary-button'>Услуги</button>
+            <a href={`tel:${constant.NUMBER}`} className='accent-button'>
+              Получить консультацию
+            </a>
+            <a className='link-button' href='#services'>
+              Услуги
+            </a>
           </div>
         </div>
 

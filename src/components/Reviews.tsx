@@ -3,8 +3,8 @@ import PersonIcon from '/person-icon.svg'
 
 export default function Reviews() {
   return (
-    <div className='section'>
-      <h1 className='heading'>Отзывы</h1>
+    <section id='reviews'>
+      <h1>Отзывы</h1>
       <div className='min-tablet:grid-cols-2 max-desktop:gap-4 grid gap-10'>
         {reviews.map(({ author, text }, index) => (
           <div key={index} className='flex items-center gap-6'>
@@ -18,6 +18,6 @@ export default function Reviews() {
           </div>
         ))}
       </div>
-    </div>
+    </section>
   )
 }

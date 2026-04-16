@@ -37,7 +37,6 @@ const towers = [
 ]
 
 export default function Towers() {
-  const baseUrl = import.meta.env.BASE_URL
   return (
     <div className='p-8'>
       <div className='flex justify-between gap-4'>
@@ -50,7 +49,7 @@ export default function Towers() {
             <div className='flex flex-col items-center justify-center gap-0 overflow-hidden'>
               <img
                 key={index}
-                src={baseUrl + tower.imageSrc}
+                src={import.meta.env.BASE_URL + tower.imageSrc}
                 alt={tower.name}
                 className='aspect-square size-full scale-120 object-contain'
               />

@@ -7,6 +7,11 @@
   --breakpoint-tablet: 900px;
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 76px;
+}
+
 body {
   font-family: 'Montserrat', sans-serif;
   font-optical-sizing: auto;
@@ -17,23 +22,36 @@ header {
   @apply fixed top-0 z-10 w-full p-4 transition-all duration-300;
 }
 
+footer {
+  @apply min-w-[320px] bg-black p-4 text-white;
+}
+
 button {
   @apply outline-none;
 }
 
-.rounded-button {
-  @apply bg-accent cursor-pointer rounded-xl px-6 py-3 font-bold text-white shadow-lg shadow-black/40 transition-transform duration-300 hover:scale-105;
+section {
+  @apply min-desktop:mx-auto min-desktop:w-[1500px] flex min-w-[320px] flex-col items-center justify-center gap-4 p-4;
 }
 
-.secondary-button {
-  @apply hover:border-accent cursor-pointer rounded-xl border-2 border-gray-300 bg-transparent px-6 py-3 font-bold transition-colors duration-300;
+h1 {
+  @apply max-desktop:my-14 max-desktop:text-3xl my-20 text-5xl font-bold;
 }
 
-.text-button {
+h2 {
+  @apply max-desktop:text-2xl text-4xl font-bold;
+}
+
+.accent-button {
+  @apply bg-accent cursor-pointer rounded-xl px-6 py-3 font-bold text-white shadow-lg shadow-black/30 transition-transform duration-300 hover:scale-105;
+}
+
+.link-button {
+  @apply flex cursor-pointer items-center justify-center rounded-xl bg-white/60 px-6 py-3 font-bold shadow-lg shadow-black/10 transition-transform duration-300 hover:scale-105;
+}
+
+.link {
   @apply hover:text-accent cursor-pointer font-bold transition-colors duration-300;
-}
-footer {
-  @apply min-w-[320px] bg-black p-4 text-white;
 }
 
 .animation {
@@ -50,12 +68,4 @@ footer {
 
 .service {
   @apply hover:bg-accent/5 flex flex-col overflow-hidden rounded-2xl bg-white shadow-lg shadow-black/10 transition-all duration-300;
-}
-
-.section {
-  @apply min-desktop:mx-auto min-desktop:w-[1500px] flex min-w-[320px] flex-col items-center justify-center gap-4 p-4;
-}
-
-.heading {
-  @apply max-desktop:my-14 max-desktop:text-3xl my-20 text-5xl font-bold;
 }

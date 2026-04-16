@@ -1,6 +1,6 @@
 export default function Banner() {
   return (
-    <div className='section'>
+    <section>
       <div className='max-desktop:h-[300px] relative flex h-[400px] w-full items-center justify-center overflow-hidden rounded-2xl text-white shadow-lg shadow-black/15'>
         <img
           src={`${import.meta.env.BASE_URL}/services/snow.jpg`}
@@ -16,6 +16,6 @@ export default function Banner() {
           </span>
         </div>
       </div>
-    </div>
+    </section>
   )
 }

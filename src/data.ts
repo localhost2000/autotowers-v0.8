@@ -84,3 +84,22 @@ export const headlines = [
   '.монтаж_рекламы',
   '.электролинии'
 ]
+
+export const sections = [
+  {
+    title: 'Услуги',
+    href: '#services'
+  },
+  {
+    title: 'Работы',
+    href: '#works'
+  },
+  {
+    title: 'Отзывы',
+    href: '#reviews'
+  },
+  {
+    title: 'Контакты',
+    href: '#contacts'
+  }
+]
