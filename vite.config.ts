@@ -9,5 +9,5 @@ export default defineConfig({
     babel({ presets: [reactCompilerPreset()] }),
     tailwindcss()
   ],
-  base: 'autotowers-pro'
+  base: 'autotowers-v0.8'
 })
